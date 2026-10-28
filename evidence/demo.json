@@ -1,0 +1,45 @@
+{
+  "invoice": "ff9275eb-ac44-4d05-ae13-0fb9e15df152",
+  "approval": "approved",
+  "export": {
+    "exported": [
+      "ff9275eb-ac44-4d05-ae13-0fb9e15df152"
+    ],
+    "failed": 0,
+    "target": "local_mock_erp"
+  },
+  "retry": {
+    "exported": [],
+    "failed": 0,
+    "target": "local_mock_erp"
+  },
+  "audit": [
+    {
+      "sequence": 1,
+      "tenant": "demo",
+      "object": "ff9275eb-ac44-4d05-ae13-0fb9e15df152",
+      "action": "invoice.submitted",
+      "actor": "operator",
+      "timestamp": "2026-10-28T02:35:08.814282+00:00",
+      "detail": "{\"flags\": []}"
+    },
+    {
+      "sequence": 2,
+      "tenant": "demo",
+      "object": "ff9275eb-ac44-4d05-ae13-0fb9e15df152",
+      "action": "invoice.approved",
+      "actor": "reviewer",
+      "timestamp": "2026-10-28T02:35:08.819485+00:00",
+      "detail": "{\"reason\": \"Synthetic source and totals checked\"}"
+    },
+    {
+      "sequence": 3,
+      "tenant": "demo",
+      "object": "ff9275eb-ac44-4d05-ae13-0fb9e15df152",
+      "action": "export.mock_sent",
+      "actor": "exporter",
+      "timestamp": "2026-10-28T02:35:08.823005+00:00",
+      "detail": "{\"outbox\": \"894f681d-6ce3-4a89-87cf-e1eeb8b2cde1\"}"
+    }
+  ]
+}

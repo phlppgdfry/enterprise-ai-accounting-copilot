@@ -1,0 +1,10 @@
+{
+  "supplier_id": "synthetic-office",
+  "invoice_number": "SYNTHETIC-2026-001",
+  "invoice_date": "2026-01-10",
+  "currency": "EUR",
+  "net": "100.00",
+  "vat": "21.00",
+  "total": "121.00",
+  "description": "Synthetic paper supplies for a fictional accountancy practice"
+}
