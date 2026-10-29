@@ -1,3 +1,4 @@
+from .security import install_security
 import hmac
 import json
 import os
@@ -33,7 +34,7 @@ def create_app(db_path=None, keys=None):
     def principal(key: Annotated[str | None, Depends(auth_header)]):
         if key:
             for expected, p in principals.items():
-                if hmac.compare_digest(key, expected):
+                if hmac.compare_digest(key.encode("utf-8"), expected.encode("utf-8")):
                     return p
         raise HTTPException(401, "Missing or invalid API key")
 
@@ -115,6 +116,7 @@ def create_app(db_path=None, keys=None):
             raise HTTPException(503, "Azure AI mode is disabled")
         return extract_pdf(content)
 
+    install_security(app, max_bytes=262144)
     return app
 
 

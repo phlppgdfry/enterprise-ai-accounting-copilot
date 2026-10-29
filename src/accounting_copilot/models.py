@@ -34,7 +34,7 @@ class Invoice(BaseModel):
 
 class Decision(BaseModel):
     model_config = ConfigDict(extra="forbid")
-    approve: bool
+    approve: bool = Field(strict=True)
     reason: str = Field(min_length=5, max_length=500)
     expected_version: int = Field(ge=1)
 

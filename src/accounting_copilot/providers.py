@@ -6,6 +6,7 @@ from urllib.parse import urlparse
 import httpx
 
 from .models import Category
+from .extraction import review_fields
 
 
 class ProviderError(Exception):
@@ -64,7 +65,7 @@ def extract_pdf(content: bytes, *, client=None, sleep=time.sleep, max_polls=30):
                     raise ProviderError("Exactly one invoice is required per PDF")
                 fields = docs[0].get("fields", {})
                 return {"provider": "azure_document_intelligence", "model": "prebuilt-invoice",
-                        "fields": fields, "requires_human_mapping": True}
+                        "fields": fields, "review": review_fields(fields), "requires_human_mapping": True}
             if data.get("status") in ("failed", "canceled"):
                 raise ProviderError("Azure document analysis failed")
             sleep(1)
