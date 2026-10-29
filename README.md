@@ -2,6 +2,14 @@
 
 Een uitvoerbare portfolio-case voor een fictief Belgisch accountancykantoor: factuurgegevens controleren, een onafhankelijke medewerker laten beslissen en een goedgekeurde factuur via een persistente outbox naar een **lokale mock-ERP** overbrengen.
 
+## Portfolio update — 29 October 2026
+
+Source-file preview, explicit JSON import, optional Azure extraction review signals, strict approvals and request security controls.
+
+[Integration and limitations](docs/portfolio-integration.md) · [Current evidence matrix](evidence/FEATURES.md)
+
+![Actual implemented workspace](evidence/screenshots/desktop.png)
+
 **Status:** lokaal geteste referentie-implementatie met uitsluitend synthetische gegevens. Azure-adapters zijn met gemockte HTTP-contracttests gecontroleerd; een echte Azure-resource, OCR-kwaliteit en Microsoft-tenant zijn nog niet gevalideerd. Geen productie- of GDPR-certificering, geen betalingen, geen koppeling met Titeca.
 
 ## Binnen drie minuten draaien
