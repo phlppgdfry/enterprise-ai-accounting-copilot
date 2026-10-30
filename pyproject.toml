@@ -1,10 +1,12 @@
 [build-system]
-requires = ["setuptools>=75"]
+requires = ["setuptools==84.2.1"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "enterprise-ai-accounting-copilot"
 version = "0.1.0"
+license = "MIT"
+license-files = ["LICENSE"]
 description = "Synthetic invoice review, approval and transactional ERP outbox portfolio case"
 requires-python = ">=3.11"
 dependencies = ["fastapi>=0.115,<1", "uvicorn>=0.34,<1", "httpx>=0.28,<1", "pydantic>=2.10,<3", "azure-identity>=1.19,<2", "python-dotenv>=1,<2"]

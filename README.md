@@ -1,5 +1,7 @@
 # Accounting Review Copilot
 
+[Current release evaluation](docs/release.md) · [Capability evidence](evidence/release-2026-10-30/FEATURES.md). Local checks are recorded; hosted CI and cloud runtime remain separately unverified.
+
 Een uitvoerbare portfolio-case voor een fictief Belgisch accountancykantoor: factuurgegevens controleren, een onafhankelijke medewerker laten beslissen en een goedgekeurde factuur via een persistente outbox naar een **lokale mock-ERP** overbrengen.
 
 ## Portfolio update — 29 October 2026

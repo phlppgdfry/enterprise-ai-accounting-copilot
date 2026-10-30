@@ -1,0 +1,22 @@
+{
+  "wheel": "enterprise_ai_accounting_copilot-0.1.0-py3-none-any.whl",
+  "sha256": "ea3968e30b1c965abc1b3986286eed3056f5c169790251b3fe69ab1409518ef9",
+  "members": [
+    "accounting_copilot/__init__.py",
+    "accounting_copilot/api.py",
+    "accounting_copilot/bootstrap.py",
+    "accounting_copilot/console.html",
+    "accounting_copilot/demo.py",
+    "accounting_copilot/extraction.py",
+    "accounting_copilot/models.py",
+    "accounting_copilot/providers.py",
+    "accounting_copilot/security.py",
+    "accounting_copilot/store.py",
+    "enterprise_ai_accounting_copilot-0.1.0.dist-info/licenses/LICENSE",
+    "enterprise_ai_accounting_copilot-0.1.0.dist-info/METADATA",
+    "enterprise_ai_accounting_copilot-0.1.0.dist-info/WHEEL",
+    "enterprise_ai_accounting_copilot-0.1.0.dist-info/entry_points.txt",
+    "enterprise_ai_accounting_copilot-0.1.0.dist-info/top_level.txt",
+    "enterprise_ai_accounting_copilot-0.1.0.dist-info/RECORD"
+  ]
+}

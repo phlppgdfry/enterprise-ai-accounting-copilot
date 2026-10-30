@@ -13,3 +13,10 @@ htmlcov/
 build/
 dist/
 .DS_Store
+
+# Local verification and package outputs
+.quality-venv/
+reports/
+build/
+dist/
+*.whl
