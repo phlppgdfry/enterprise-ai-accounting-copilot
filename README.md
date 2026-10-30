@@ -1,6 +1,6 @@
 # Accounting Review Copilot
 
-[Portfolio case study](https://github.com/phlppgdfry/ai-transformation-playbook/tree/portfolio/enterprise-quality-2026-10-29) · [Current release evaluation](docs/release.md) · [Capability evidence](evidence/release-2026-10-30/FEATURES.md). Local checks are recorded; hosted CI and cloud runtime remain separately unverified.
+[Portfolio case study](https://github.com/phlppgdfry/ai-transformation-playbook/tree/portfolio/enterprise-quality-2026-10-29) · [Current release evaluation](docs/release.md) · [Capability evidence](evidence/release-2026-10-30/FEATURES.md). Local and hosted release checks passed; [exact commit and workflow evidence](https://github.com/phlppgdfry/ai-transformation-playbook/blob/portfolio/enterprise-quality-2026-10-29/portfolio/release-2026-10-31/REPORT.md). Cloud runtime remains unverified.
 
 Een uitvoerbare portfolio-case voor een fictief Belgisch accountancykantoor: factuurgegevens controleren, een onafhankelijke medewerker laten beslissen en een goedgekeurde factuur via een persistente outbox naar een **lokale mock-ERP** overbrengen.
 
