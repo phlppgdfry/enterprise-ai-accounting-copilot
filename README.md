@@ -1,5 +1,11 @@
 # Accounting Review Copilot
 
+<!-- showcase:start -->
+> **[▶ Check an invoice](https://phlppgdfry.github.io/enterprise-ai-accounting-copilot/)** — run the exact-cent invoice checks and review flags in your browser: one cent off, three decimals, an unknown supplier and the floating-point trap.
+
+[![Check an invoice: enterprise-ai-accounting-copilot](site/demo.png)](https://phlppgdfry.github.io/enterprise-ai-accounting-copilot/)
+<!-- showcase:end -->
+
 **Stack:** Python · FastAPI · Pydantic · SQLite · optional Azure extraction/classification adapters. [Portfolio v1.0 release scope](docs/releases/portfolio-v1.0.0.md).
 
 [Portfolio case study](https://github.com/phlppgdfry/ai-transformation-playbook/tree/portfolio/enterprise-quality-2026-10-29) · [Current release evaluation](docs/release.md) · [Capability evidence](evidence/release-2026-10-30/FEATURES.md). Local and hosted release checks passed; [exact commit and workflow evidence](https://github.com/phlppgdfry/ai-transformation-playbook/blob/portfolio/enterprise-quality-2026-10-29/portfolio/release-2026-10-31/REPORT.md). Cloud runtime remains unverified.

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Accounting Review Copilot — invoice checks to the cent, a second pair of eyes, and one export</title>
+<meta name="description" content="An executable case for a fictional Belgian accounting practice: exact invoice validation, review flags, four-eyes approval and an outbox that exports each approved invoice once to a local mock ERP. Try the checks live.">
+<link rel="canonical" href="https://phlppgdfry.github.io/enterprise-ai-accounting-copilot/">
+<meta property="og:type" content="website"><meta property="og:title" content="Accounting Review Copilot — invoice checks to the cent, a second pair of eyes, and one export"><meta property="og:description" content="An executable case for a fictional Belgian accounting practice: exact invoice validation, review flags, four-eyes approval and an outbox that exports each approved invoice once to a local mock ERP. Try the checks live.">
+<meta property="og:url" content="https://phlppgdfry.github.io/enterprise-ai-accounting-copilot/"><meta property="og:image" content="https://phlppgdfry.github.io/enterprise-ai-accounting-copilot/og.jpg"><meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0a0d12">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2334d399'/%3E%3C/svg%3E">
+<link rel="preload" href="assets/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/showcase.css">
+<style>:root{--brand:#34d399;--accent-ink:#03140c}
+.ac-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.ac-grid>*{min-width:0}
+@media (max-width:900px){.ac-grid{grid-template-columns:1fr}}
+.ac-form label{display:block}
+.ac-presets{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.ac-presets button{font:500 12px var(--sans);padding:6px 10px;border-radius:999px;border:1px solid var(--line2);background:var(--bg2);color:var(--muted);cursor:pointer}
+.ac-presets button:hover{color:var(--fg);border-color:var(--accent)}
+.ac-status{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px}
+.ac-status p{margin:8px 0 0;font-size:14px}
+.ac-checks{list-style:none;margin:10px 0 0;padding:0}
+.ac-checks li{display:flex;gap:10px;align-items:flex-start;padding:7px 0;border-top:1px solid var(--line);font-size:14px}
+.ac-checks .pill{min-width:38px;justify-content:center}
+</style>
+</head>
+<body>
+<div class="top"><div class="wrap">
+  <a class="brand" href="#"><i class="dot"></i><span>Accounting Review Copilot</span></a>
+  <nav><a class="" href="#demo">Try it</a><a class="" href="#how">How it works</a><a class="hide-sm" href="#screens">Screens</a><a class="hide-sm" href="#run">Run it</a><a href="https://github.com/phlppgdfry/enterprise-ai-accounting-copilot" aria-label="GitHub repository">GitHub</a><button class="theme" type="button" aria-label="Toggle light or dark theme"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button></nav>
+</div></div>
+<main>
+<header class="hero"><div class="wrap grid">
+  <div>
+    <div class="kicker"><span>Python · FastAPI · accounting · Azure-ready</span><span class="chip status">Portfolio v1.0</span></div>
+    <h1>Every cent checked. <em>Every booking approved by someone else.</em></h1>
+    <p class="lede">Invoices arrive with typos, unknown suppliers and totals that are one cent off. This workbench validates them with exact decimal arithmetic, blocks suspicious ones for review, lets only a different person approve, and exports each approved invoice once through a transactional outbox. Azure extraction and categorisation are optional proposals, never decisions.</p>
+    <div class="ctas"><a class="btn primary" href="#demo"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg> Check an invoice</a><a class="btn" href="https://github.com/phlppgdfry/enterprise-ai-accounting-copilot"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg> Source on GitHub</a></div>
+    <div class="stack"><span class="chip">Python 3.13</span><span class="chip">FastAPI</span><span class="chip">Pydantic Decimal</span><span class="chip">SQLite</span><span class="chip">Transactional outbox</span><span class="chip">Azure Document Intelligence (optional)</span><span class="chip">pytest</span></div>
+  </div>
+  <div class="hero-visual"><div class="frame"><div class="bar"><i></i><i></i><i></i><b>127.0.0.1:8000/console · invoice workbench</b></div><img src="img/evidence-screenshots-desktop.webp" alt="Accounting Review Copilot" width="1440" height="1000"></div><div class="caption">The repository&#x27;s invoice workbench with synthetic invoices.</div></div>
+</div></header>
+<section id="why"><div class="wrap">
+  <p class="eyebrow">Why it exists</p><h2>Small errors in invoices become real money.</h2>
+  <div class="problem">
+    <div class="card before"><div class="label">Without it</div><p>Amounts are typed or extracted as floats, a total that is one cent off slips through, an invoice from an unknown supplier gets paid, the same invoice is booked twice after a retry, and the person who entered it also approves it.</p></div>
+    <div class="card after"><div class="label">With it</div><p>Amounts are exact decimals and must balance to the cent. Unknown suppliers, future dates and totals above €10,000 block an invoice for review. The submitter cannot approve their own invoice, decisions carry a version check, and the outbox exports idempotently.</p></div>
+  </div>
+</div></section>
+<section id="demo"><div class="wrap">
+  <p class="eyebrow">Try it · runs in your browser</p><h2>Check an invoice</h2>
+  <p class="sub">The same rules as the <code>Invoice</code> model and the review flags in <code>store.py</code>, run in your browser with whole-cent arithmetic. Try the presets: one cent off, three decimals, an unknown supplier, and the classic floating-point trap.</p>
+  <div class="demo"><div class="ac-grid">
+  <div class="ac-form">
+    <div class="row"><label>Supplier<select id="ac-sup"><option value="synthetic-office">synthetic-office · approved</option><option value="unknown-supplier">unknown-supplier · not on the list</option></select></label><label>Invoice date<input id="ac-date" type="date" value="2026-01-10"></label></div>
+    <div class="row"><label>Net (€)<input id="ac-net" value="100.00"></label><label>VAT (€)<input id="ac-vat" value="21.00"></label><label>Total (€)<input id="ac-total" value="121.00"></label></div>
+    <div class="ac-presets" id="ac-presets"></div>
+  </div>
+  <div>
+    <div id="ac-status" class="ac-status"></div>
+    <ul id="ac-checks" class="ac-checks"></ul>
+  </div>
+</div>
+</div>
+  <p class="note">The real API adds idempotency keys, unique supplier and invoice-number pairs, tenant filters, the four-eyes rule and the export. All suppliers and invoices are synthetic.</p>
+</div></section>
+<section id="how"><div class="wrap">
+  <p class="eyebrow">How it works</p><h2>From intake to an export that happens once</h2>
+  
+  <div class="cards"><div class="card"><div class="ic">01</div><h3>Exact money</h3><p>EUR only, Decimal with two places and at most 12 digits; net + VAT must equal the total exactly, and VAT above net is investigated.</p></div><div class="card"><div class="ic">02</div><h3>Flags, not silent failures</h3><p>Unknown supplier, future invoice date and totals above €10,000 store the invoice as blocked until a reviewer decides with a reason.</p></div><div class="card"><div class="ic">03</div><h3>Four-eyes and versions</h3><p>Roles come from server configuration; the submitter cannot review their own invoice, and a stale version is rejected.</p></div><div class="card"><div class="ic">04</div><h3>One export</h3><p>Approval and outbox are written in one SQLite transaction; the mock ERP processes idempotently and failures stay retryable.</p></div></div>
+  <h3 style="margin:34px 0 14px">The flow, step by step</h3><div class="flow" role="list"><div class="node"><div class="n">01</div><b>Operator submits</b><small>Idempotency-Key required</small></div><div class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div><div class="node"><div class="n">02</div><b>Validate</b><small>exact decimals, balanced totals</small></div><div class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div><div class="node hl"><div class="n">03</div><b>Flag</b><small>supplier, date, amount → blocked</small></div><div class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div><div class="node"><div class="n">04</div><b>Reviewer decides</b><small>not the submitter, reason, version</small></div><div class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div><div class="node"><div class="n">05</div><b>Outbox export</b><small>once, to a local mock ERP</small></div></div>
+</div></section>
+<section id="screens"><div class="wrap">
+  <p class="eyebrow">Screens</p><h2>What it looks like</h2>
+  
+  <div class="gallery"><figure data-zoom="On a phone — The workbench at 390 pixels."><div class="frame"><img src="img/evidence-screenshots-mobile.webp" alt="On a phone" width="390" height="844" loading="lazy" decoding="async"></div><figcaption><b>On a phone</b> The workbench at 390 pixels.</figcaption></figure></div>
+</div></section>
+<section id="evidence"><div class="wrap">
+  <p class="eyebrow">Evidence</p><h2>What is real, and what is not</h2>
+  
+  <div class="metrics"><div class="metric"><div class="v">38</div><div class="l">automated tests</div><div class="s">money, roles, idempotency, concurrency, export</div></div><div class="metric"><div class="v">€0.01</div><div class="l">tolerance</div><div class="s">none: totals must balance exactly</div></div><div class="metric"><div class="v">1</div><div class="l">booking per approved invoice</div><div class="s">a second export creates nothing</div></div></div>
+  <div class="honest" style="margin-top:18px">
+      <div class="card real"><h3><span class="pill ok">REAL</span> Built and verified</h3><ul><li>FastAPI service, validation, flags, four-eyes review, outbox and audit, with tests and CI</li><li>Optional Azure Document Intelligence and Azure OpenAI adapters, checked with mocked HTTP contract tests</li><li>A demo that proves a second export does not create a second booking</li></ul></div>
+      <div class="card sim"><h3><span class="pill warn">SIMULATED</span> Mocked or not built yet</h3><ul><li>Synthetic suppliers and invoices; the ERP is a local mock</li><li>No real Azure resource, OCR quality or Microsoft tenant validated</li><li>The audit trail is not tamper-proof: a database administrator can change it</li></ul></div></div>
+</div></section>
+<section id="run"><div class="wrap two">
+  <div><p class="eyebrow">Run it yourself</p><h2>Run it locally</h2>
+  
+  <div class="code"><button class="copy" type="button">Copy</button><pre><code>git clone https://github.com/phlppgdfry/enterprise-ai-accounting-copilot
+cd enterprise-ai-accounting-copilot
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements.lock
+.venv/bin/python -m pip install --no-deps -e .
+.venv/bin/python -m accounting_copilot.demo
+.venv/bin/python -m pytest -q
+.venv/bin/python -m accounting_copilot.bootstrap
+.venv/bin/uvicorn accounting_copilot.api:app --env-file .env --host 127.0.0.1 --port 8000</code></pre></div></div>
+  <div><p class="eyebrow">Go deeper</p><h2>Read the source</h2>
+  <div class="links"><a href="https://github.com/phlppgdfry/enterprise-ai-accounting-copilot"><span>Repository</span><span>github</span></a><a href="https://github.com/phlppgdfry/enterprise-ai-accounting-copilot/blob/HEAD/docs/azure.md"><span>Azure integration</span><span>nl</span></a><a href="https://github.com/phlppgdfry/enterprise-ai-accounting-copilot/blob/HEAD/evidence/README.md"><span>Evidence and browser check</span><span>md</span></a><a href="https://github.com/phlppgdfry/enterprise-ai-accounting-copilot/blob/HEAD/examples/invoice.json"><span>Example invoice</span><span>json</span></a><a href="https://phlppgdfry.github.io/ai-transformation-playbook/"><span>AI Transformation Playbook (the case)</span><span>live</span></a></div></div>
+</div></section></main>
+<footer><div class="wrap">
+  <span>Accounting Review Copilot · A portfolio project by Philippe Godfroy</span>
+  <span><a href="https://www.philippegodfroy.com/work">More projects</a> · <a href="https://github.com/phlppgdfry/enterprise-ai-accounting-copilot">Source</a></span>
+</div></footer>
+<script src="assets/showcase.js"></script>
+
+<script src="assets/demo.js" type="module"></script>
+</body></html>
